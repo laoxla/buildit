@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buildit</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <nav>
+ <ul class="nav nav-tabs">
+
+   <li role="presentation" class="active"><a href="#"><%= link_to 'Buildit',  root_path %></a></li>
+   <li role="presentation"><a href="#"><%=  'hot' %></a></li>
+   <li role="presentation"><a href="#"><%= link_to 'New', new_article_path %></a></li>
+   <li role="presentation"><a href="#"><%=  'rising' %></a></li>
+   <li role="presentation"><a href="#"><%=  'controversial' %></a></li>
+   <li role="presentation"><a href="#"><%=  'top' %></a></li>
+   <li role="presentation"><a href="#"><%=  'gilded' %></a></li>
+   <li role="presentation"><a href="#"><%=  'wiki' %></a></li>
+   <li role="presentation"><a href="#"><%=  'promoted' %></a> </a></li>
+
+
+
+ </ul>
+</nav>
+
+
+<%= yield %>
+
+</body>
+</html>
