@@ -11,9 +11,9 @@
   <nav>
  <ul class="nav nav-tabs">
 
-   <li role="presentation" class="active"><a href="#"><%= link_to 'Buildit',  root_path %></a></li>
+   <li role="presentation" class="active"><%= link_to 'Buildit', root_path %></li>
    <li role="presentation"><a href="#"><%=  'hot' %></a></li>
-   <li role="presentation"><a href="#"><%= link_to 'New', new_article_path %></a></li>
+   <li role="presentation"><%= link_to 'New', new_article_path %></li>
    <li role="presentation"><a href="#"><%=  'rising' %></a></li>
    <li role="presentation"><a href="#"><%=  'controversial' %></a></li>
    <li role="presentation"><a href="#"><%=  'top' %></a></li>
@@ -26,8 +26,10 @@
  </ul>
 </nav>
 
+<div id="wrapper">
 
 <%= yield %>
 
+</div>
 </body>
 </html>

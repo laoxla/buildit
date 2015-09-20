@@ -1,13 +1,30 @@
-
+<div class="container">
 <h1>Buildit</h1>
+<hr>
 
-<div class="articles">
 <% @articles.each do |article| %>
-  <h2>
-    <%= link_to article.title %>
-  </h2>
-  <P><%= article.name %></p>
-  <%= image_tag(article.photo) %>
-<% end %>
 
+  <div class= "content">
+
+
+
+
+    <%= image_tag(article.photo) %>
+  <h3 >
+    <%= link_to article.title, article.url %>
+</h3>
+    <small>Published <%= distance_of_time_in_words_to_now article.created_at %> ago. </small>
+
+    <%= link_to like_article_path(id: article.id), method: :post, class: 'btn btn-default' do %>
+    <i class ="glyphicon glyphicon-thumbs-up"></i>
+    <%= pluralize article.view_count, 'view' %>
+    <% end %>
+
+
+
+
+  <a><%= link_to article.name, article %> </a>
+  </div>
+<% end %>
+</div>
 </div>
