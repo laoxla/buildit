@@ -1,12 +1,13 @@
 <div class="container">
-  <h1>Article#edit</h1>
-  <p>Find me in app/views/article/edit.html.erb</p>
-  
+  <h1>Edit</h1>
+
+
   <%= simple_form_for @article do |f| %>
   <%= f.input :photo %>
   <%= f.input :title %>
   <%= f.input :name %>
   <%= f.input :url %>
-  <%= f.button :submit %>
+  <%= f.button :submit %> or <%= link_to 'Delete', "delete_article_path", method: :delete, data: {confirm: "Are you sure?"} %>
+
 <% end %>
 </div>
